@@ -19,3 +19,4 @@ C:\Users\User\Desktop\calculator-master\Calculator\obj\Debug\Calculator.csproj.G
 C:\Users\User\Desktop\calculator-master\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\calculator-master\Calculator\obj\Debug\Calculator.exe
 C:\Users\User\Desktop\calculator-master\Calculator\obj\Debug\Calculator.pdb
+C:\Users\User\Desktop\calculator-master\Calculator\obj\Debug\Calculator.Form2.resources
