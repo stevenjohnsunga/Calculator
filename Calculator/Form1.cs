@@ -20,7 +20,21 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        void calccsd()
+        {
+            if ((displaybox.Text == "0") || (enter_value))
+                displaybox.Text = "";
+            enter_value = false;
+            string num="";
+            if (num == ".")
+            {
+                if (!displaybox.Text.Contains("."))
+                    displaybox.Text = displaybox.Text + num;
+            }
+            else
+                displaybox.Text = displaybox.Text + num;
 
+        }
         private void btn_num_dot(object sender, EventArgs e)
         {
             if ((displaybox.Text == "0") || (enter_value))
@@ -316,6 +330,16 @@ namespace Calculator
             lblShowOperation.Text = System.Convert.ToString((displaybox.Text) + "%");
             percent_num = Convert.ToDouble(0.01 * Convert.ToDouble(displaybox.Text));
             displaybox.Text = System.Convert.ToString(percent_num);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Welcome to my Calculator! :)");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
