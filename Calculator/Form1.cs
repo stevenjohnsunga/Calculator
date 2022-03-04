@@ -58,8 +58,12 @@ namespace Calculator
 
         private void clear_Click(object sender, EventArgs e)
         {
+            clear1();
+        }
+        void clear1()
+        {
             results = 0;
-            displaybox.Text = "0";
+            displaybox.Text="0";
             lblShowOperation.Text = "";
         }
 
@@ -323,10 +327,14 @@ namespace Calculator
             cbroot_num = (Math.Pow(cbroot_num, (double)1.0 / 3.0));
             displaybox.Text = System.Convert.ToString(cbroot_num);
         }
-
+        double mycon(string x,double y)
+        {
+            y = double.Parse(x);
+            return y;
+        }
         private void percent_sign_Click(object sender, EventArgs e)
         {
-            double percent_num = Double.Parse(displaybox.Text);
+            double percent_num = 0;
             lblShowOperation.Text = System.Convert.ToString((displaybox.Text) + "%");
             percent_num = Convert.ToDouble(0.01 * Convert.ToDouble(displaybox.Text));
             displaybox.Text = System.Convert.ToString(percent_num);
@@ -340,7 +348,7 @@ namespace Calculator
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult d;
-            d = MessageBox.Show("Welcome to C# Corner", "Learn C#", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            d = MessageBox.Show("Are you sure you want to exit?", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (d == DialogResult.Yes)
             {
                 Close();
