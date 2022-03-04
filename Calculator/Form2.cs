@@ -18,13 +18,20 @@ namespace Calculator
         }
         int fnum = 0;
         int snum = 0;
-        bool isA=true;
+       
+        string op = "";
         void dis(string x)
         {
 
             txtdisplay.AppendText(x);
         }
-
+        void disabler()
+        {
+            button11.Enabled = false;
+            button12.Enabled = false;
+            button13.Enabled = false;
+            button14.Enabled = false;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             dis("9");
@@ -73,6 +80,97 @@ namespace Calculator
         private void button10_Click(object sender, EventArgs e)
         {
             dis("0");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+           
+                op = "+";
+                fnum = int.Parse(txtdisplay.Text);
+                txtdisplay.Text = "";
+            disabler();
+
+        }
+        void enabler()
+        {
+            button11.Enabled = true;
+            button12.Enabled = true;
+            button13.Enabled = true;
+            button14.Enabled = true;
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            op = "-";
+            fnum = int.Parse(txtdisplay.Text);
+            txtdisplay.Text = "";
+            disabler();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            op = "/";
+            fnum = int.Parse(txtdisplay.Text);
+            txtdisplay.Text = "";
+            disabler();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            op = "*";
+            fnum = int.Parse(txtdisplay.Text);
+            txtdisplay.Text = "";
+            disabler();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (op == "+")
+            {
+                snum = int.Parse(txtdisplay.Text);
+                enabler();
+                int x = snum + fnum;
+                txtdisplay.Text = "";
+                txtdisplay.AppendText(x.ToString());
+            }
+            if (op == "-")
+            {
+                snum = int.Parse(txtdisplay.Text);
+                enabler();
+                int x = snum - fnum;
+                txtdisplay.Text = "";
+                txtdisplay.AppendText(x.ToString());
+            }
+            if (op == "*")
+            {
+                snum = int.Parse(txtdisplay.Text);
+                enabler();
+                int x = snum * fnum;
+                txtdisplay.Text = "";
+                txtdisplay.AppendText(x.ToString());
+            }
+            if (op == "/")
+            {
+                snum = int.Parse(txtdisplay.Text);
+                enabler();
+                int x = snum / fnum;
+                txtdisplay.Text = "";
+                txtdisplay.AppendText(x.ToString());
+            }
+            op = "";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            enabler();
+            txtdisplay.Text = "";
+            fnum = 0;
+            snum = 0;
+            op = "";
         }
     }
 }
