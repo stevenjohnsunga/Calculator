@@ -201,6 +201,7 @@
             // 
             this.txtdisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdisplay.Location = new System.Drawing.Point(27, 22);
+            this.txtdisplay.MaxLength = 6;
             this.txtdisplay.Multiline = true;
             this.txtdisplay.Name = "txtdisplay";
             this.txtdisplay.Size = new System.Drawing.Size(312, 46);
