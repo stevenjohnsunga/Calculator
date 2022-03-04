@@ -339,7 +339,13 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult d;
+            d = MessageBox.Show("Welcome to C# Corner", "Learn C#", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (d == DialogResult.Yes)
+            {
+                Close();
+            }
+           
         }
     }
 }
