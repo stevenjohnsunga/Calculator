@@ -100,7 +100,9 @@ namespace Calculator
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            txtdisplay.Enabled = false;
+            txtdisplay.BackColor= Color.White;
+            txtdisplay.ForeColor = Color.Black;
         }
 
         private void button12_Click(object sender, EventArgs e)
