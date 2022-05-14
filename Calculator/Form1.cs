@@ -19,6 +19,7 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("Hello My Friend")
         }
         void calccsd()
         {
